@@ -1,0 +1,6 @@
+framework module Pods_YZDropdown {
+  umbrella header "Pods-YZDropdown-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0859157D412EC334BE2A18F3 /* Pods_YZDropdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED0D3F0EBE8463AC591AE5 /* Pods_YZDropdown.framework */; };
+		6058BC1D22B5B87900342C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC1C22B5B87900342C44 /* AppDelegate.swift */; };
+		6058BC1F22B5B87900342C44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC1E22B5B87900342C44 /* ViewController.swift */; };
+		6058BC2222B5B87900342C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6058BC2022B5B87900342C44 /* Main.storyboard */; };
+		6058BC2422B5B88100342C44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6058BC2322B5B88100342C44 /* Assets.xcassets */; };
+		6058BC2722B5B88100342C44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6058BC2522B5B88100342C44 /* LaunchScreen.storyboard */; };
+		6058BC2F22B5B89A00342C44 /* YZDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC2E22B5B89A00342C44 /* YZDropdown.swift */; };
+		6058BC3122B5B98A00342C44 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC3022B5B98A00342C44 /* Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		6058BC1922B5B87900342C44 /* YZDropdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZDropdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6058BC1C22B5B87900342C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6058BC1E22B5B87900342C44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6058BC2122B5B87900342C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6058BC2322B5B88100342C44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6058BC2622B5B88100342C44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6058BC2822B5B88100342C44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6058BC2E22B5B89A00342C44 /* YZDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZDropdown.swift; sourceTree = "<group>"; };
+		6058BC3022B5B98A00342C44 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		60ED0D3F0EBE8463AC591AE5 /* Pods_YZDropdown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YZDropdown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		75D3FD02D5F3B3B55A1AA261 /* Pods-YZDropdown.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZDropdown.debug.xcconfig"; path = "Target Support Files/Pods-YZDropdown/Pods-YZDropdown.debug.xcconfig"; sourceTree = "<group>"; };
+		B9646C62AFDB48D2DE799139 /* Pods-YZDropdown.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YZDropdown.release.xcconfig"; path = "Target Support Files/Pods-YZDropdown/Pods-YZDropdown.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6058BC1622B5B87800342C44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0859157D412EC334BE2A18F3 /* Pods_YZDropdown.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E6688B32219428ECE3A3964 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60ED0D3F0EBE8463AC591AE5 /* Pods_YZDropdown.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6058BC1022B5B87800342C44 = {
+			isa = PBXGroup;
+			children = (
+				6058BC1B22B5B87900342C44 /* YZDropdown */,
+				6058BC1A22B5B87900342C44 /* Products */,
+				844D96B1003C8CA62425B60B /* Pods */,
+				2E6688B32219428ECE3A3964 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6058BC1A22B5B87900342C44 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6058BC1922B5B87900342C44 /* YZDropdown.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6058BC1B22B5B87900342C44 /* YZDropdown */ = {
+			isa = PBXGroup;
+			children = (
+				6058BC1C22B5B87900342C44 /* AppDelegate.swift */,
+				6058BC1E22B5B87900342C44 /* ViewController.swift */,
+				6058BC2022B5B87900342C44 /* Main.storyboard */,
+				6058BC2322B5B88100342C44 /* Assets.xcassets */,
+				6058BC2522B5B88100342C44 /* LaunchScreen.storyboard */,
+				6058BC2822B5B88100342C44 /* Info.plist */,
+				6058BC2E22B5B89A00342C44 /* YZDropdown.swift */,
+				6058BC3022B5B98A00342C44 /* Extensions.swift */,
+			);
+			path = YZDropdown;
+			sourceTree = "<group>";
+		};
+		844D96B1003C8CA62425B60B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75D3FD02D5F3B3B55A1AA261 /* Pods-YZDropdown.debug.xcconfig */,
+				B9646C62AFDB48D2DE799139 /* Pods-YZDropdown.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6058BC1822B5B87800342C44 /* YZDropdown */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6058BC2B22B5B88100342C44 /* Build configuration list for PBXNativeTarget "YZDropdown" */;
+			buildPhases = (
+				C05478C0AF341FB54D45D21B /* [CP] Check Pods Manifest.lock */,
+				6058BC1522B5B87800342C44 /* Sources */,
+				6058BC1622B5B87800342C44 /* Frameworks */,
+				6058BC1722B5B87800342C44 /* Resources */,
+				D2A7BA1F6B34A0E2481748F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YZDropdown;
+			productName = YZDropdown;
+			productReference = 6058BC1922B5B87900342C44 /* YZDropdown.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6058BC1122B5B87800342C44 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Yerassyl Zhassuzakhov";
+				TargetAttributes = {
+					6058BC1822B5B87800342C44 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 6058BC1422B5B87800342C44 /* Build configuration list for PBXProject "YZDropdown" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6058BC1022B5B87800342C44;
+			productRefGroup = 6058BC1A22B5B87900342C44 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6058BC1822B5B87800342C44 /* YZDropdown */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6058BC1722B5B87800342C44 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6058BC2722B5B88100342C44 /* LaunchScreen.storyboard in Resources */,
+				6058BC2422B5B88100342C44 /* Assets.xcassets in Resources */,
+				6058BC2222B5B87900342C44 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C05478C0AF341FB54D45D21B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YZDropdown-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2A7BA1F6B34A0E2481748F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZDropdown/Pods-YZDropdown-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-YZDropdown/Pods-YZDropdown-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-YZDropdown/Pods-YZDropdown-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6058BC1522B5B87800342C44 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6058BC1F22B5B87900342C44 /* ViewController.swift in Sources */,
+				6058BC2F22B5B89A00342C44 /* YZDropdown.swift in Sources */,
+				6058BC1D22B5B87900342C44 /* AppDelegate.swift in Sources */,
+				6058BC3122B5B98A00342C44 /* Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6058BC2022B5B87900342C44 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6058BC2122B5B87900342C44 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6058BC2522B5B88100342C44 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6058BC2622B5B88100342C44 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6058BC2922B5B88100342C44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6058BC2A22B5B88100342C44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6058BC2C22B5B88100342C44 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75D3FD02D5F3B3B55A1AA261 /* Pods-YZDropdown.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7XBRGS6CR;
+				INFOPLIST_FILE = YZDropdown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yera.YZDropdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6058BC2D22B5B88100342C44 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9646C62AFDB48D2DE799139 /* Pods-YZDropdown.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7XBRGS6CR;
+				INFOPLIST_FILE = YZDropdown/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = yera.YZDropdown;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6058BC1422B5B87800342C44 /* Build configuration list for PBXProject "YZDropdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6058BC2922B5B88100342C44 /* Debug */,
+				6058BC2A22B5B88100342C44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6058BC2B22B5B88100342C44 /* Build configuration list for PBXNativeTarget "YZDropdown" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6058BC2C22B5B88100342C44 /* Debug */,
+				6058BC2D22B5B88100342C44 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6058BC1122B5B87800342C44 /* Project object */;
+}
