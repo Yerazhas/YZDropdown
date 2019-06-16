@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
 
     lazy var dropdown: YZDropdown = {
-        let dd = YZDropdown(icons: [#imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546")], expandedIcon: #imageLiteral(resourceName: "Group 10566"))
+        let dd = YZDropdown(icons: [#imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546"), #imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546"), #imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546"), #imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546")], expandedIcon: #imageLiteral(resourceName: "Group 10566"))
         
         return dd
     }()
