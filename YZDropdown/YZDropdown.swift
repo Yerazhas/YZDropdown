@@ -12,6 +12,7 @@ class YZDropdown: UIView {
     var cornerRadius: CGFloat!
     var optionSelection: ((Int) -> ())?
     private let expandedIcon: UIImage?
+    private var collapsedIcon: UIImage?
     private let optionButtons: [UIButton]
     private var isExpanded = false {
         didSet {
@@ -26,6 +27,7 @@ class YZDropdown: UIView {
     init(icons: [UIImage], expandedIcon: UIImage? = nil) {
         assert(!icons.isEmpty, "Icons array shouldn't be empty")
         var tempButtons = [UIButton]()
+        collapsedIcon = icons.first!
         for i in 0..<icons.count {
             let icon = icons[i]
             let button = UIButton(type: .system)
@@ -42,6 +44,7 @@ class YZDropdown: UIView {
     
     init(optionButtons: [UIButton], expandedIcon: UIImage? = nil) {
         assert(!optionButtons.isEmpty, "OptionButtons array shouldn't be empty")
+        collapsedIcon = optionButtons.first!.currentImage
         for i in 0..<optionButtons.count {
             optionButtons[i].tag = i + 1
         }
@@ -73,7 +76,7 @@ class YZDropdown: UIView {
     }
     
     private func setCollapsedState() {
-        optionButtons[0].setImage(#imageLiteral(resourceName: "Group 10567").withRenderingMode(.alwaysOriginal), for: .normal)
+        optionButtons[0].setImage(collapsedIcon!.withRenderingMode(.alwaysOriginal), for: .normal)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
             for i in 1..<self.optionButtons.count {
                 let timeInterval = 0.01
