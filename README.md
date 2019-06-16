@@ -29,7 +29,7 @@ let dropdown = YZDropdown(optionButtons: [firstButton,
 
 ```swift 
 //You can pass extra expandedIcon parameter to init
-let dropdown = YZDropdown(..., expandedButton: UIImage())
+let dropdown = YZDropdown(..., expandedIcon: UIImage())
 
 //Callback action on any dropdown options tapped
 dropdown.optionSelection = { [weak dropdown] (tappedIndex) in
