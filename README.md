@@ -2,7 +2,7 @@
 
 YZDropdown is a small dropdown library for selecting options.
 
-![YZDropdown usage demo](demo/demo.gif)
+![YZDropdown usage demo](demo/demo1.gif)
 
 
 ## Usage
