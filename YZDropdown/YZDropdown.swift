@@ -11,6 +11,7 @@ import UIKit
 class YZDropdown: UIView {
     var cornerRadius: CGFloat!
     var optionSelection: ((Int) -> ())?
+    private let expandedIcon: UIImage?
     private let optionButtons: [UIButton]
     private var isExpanded = false {
         didSet {
@@ -22,7 +23,7 @@ class YZDropdown: UIView {
         }
     }
     
-    init(icons: [UIImage]) {
+    init(icons: [UIImage], expandedIcon: UIImage? = nil) {
         assert(!icons.isEmpty, "Icons array shouldn't be empty")
         var tempButtons = [UIButton]()
         for i in 0..<icons.count {
@@ -32,17 +33,19 @@ class YZDropdown: UIView {
             button.tag = i + 1
             tempButtons.append(button)
         }
+        self.expandedIcon = expandedIcon
         self.optionButtons = tempButtons
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
         setupViews()
     }
     
-    init(optionButtons: [UIButton]) {
+    init(optionButtons: [UIButton], expandedIcon: UIImage? = nil) {
         assert(!optionButtons.isEmpty, "OptionButtons array shouldn't be empty")
         for i in 0..<optionButtons.count {
             optionButtons[i].tag = i + 1
         }
+        self.expandedIcon = expandedIcon
         self.optionButtons = optionButtons
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
@@ -84,7 +87,9 @@ class YZDropdown: UIView {
     }
     
     private func setExpandedState() {
-        optionButtons[0].setImage(#imageLiteral(resourceName: "Group 10566").withRenderingMode(.alwaysOriginal), for: .normal)
+        if let expandedIcon = expandedIcon {
+            optionButtons[0].setImage(expandedIcon.withRenderingMode(.alwaysOriginal), for: .normal)
+        }
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 4, initialSpringVelocity: 7, options: .curveEaseInOut, animations: {
             for i in 1..<self.optionButtons.count {
                 let timeInterval = 0.01

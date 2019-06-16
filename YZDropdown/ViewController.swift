@@ -14,27 +14,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         view.addSubview(dropdown)
-        view.addSubview(dropdown1)
+//        view.addSubview(dropdown1)
         dropdown.optionSelection = { [weak dropdown] (index) in
             print("option tapped at index: \(index)")
             dropdown?.changeExpandedState()
         }
-        dropdown1.optionSelection = { [weak dropdown1] (index) in
-            print("option tapped at index: \(index)")
-            dropdown1?.changeExpandedState()
-        }
+//        dropdown1.optionSelection = { [weak dropdown1] (index) in
+//            print("option tapped at index: \(index)")
+//            dropdown1?.changeExpandedState()
+//        }
         dropdown.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.centerX.equalToSuperview().offset(-30)
+            make.centerX.equalToSuperview()
         }
-        dropdown1.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
-            make.left.equalTo(dropdown.snp.right).offset(20)
-        }
+//        dropdown1.snp.makeConstraints { (make) in
+//            make.centerY.equalToSuperview()
+//            make.left.equalTo(dropdown.snp.right).offset(20)
+//        }
     }
 
     lazy var dropdown: YZDropdown = {
-        let dd = YZDropdown(icons: [#imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546")])
+        let dd = YZDropdown(icons: [#imageLiteral(resourceName: "Group 10567"), #imageLiteral(resourceName: "Group 10574"), #imageLiteral(resourceName: "Group 10546")], expandedIcon: #imageLiteral(resourceName: "Group 10566"))
         
         return dd
     }()
