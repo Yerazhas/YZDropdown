@@ -24,12 +24,12 @@ class YZDropdown: UIView {
         }
     }
     
-    init(icons: [UIImage], expandedIcon: UIImage? = nil) {
-        assert(!icons.isEmpty, "Icons array shouldn't be empty")
+    init(options: [UIImage], expandedIcon: UIImage? = nil) {
+        assert(!options.isEmpty, "Icons array shouldn't be empty")
         var tempButtons = [UIButton]()
-        collapsedIcon = icons.first!
-        for i in 0..<icons.count {
-            let icon = icons[i]
+        collapsedIcon = options.first!
+        for i in 0..<options.count {
+            let icon = options[i]
             let button = UIButton(type: .system)
             button.setImage(icon.withRenderingMode(.alwaysOriginal), for: .normal)
             button.tag = i + 1
@@ -42,14 +42,14 @@ class YZDropdown: UIView {
         setupViews()
     }
     
-    init(optionButtons: [UIButton], expandedIcon: UIImage? = nil) {
-        assert(!optionButtons.isEmpty, "OptionButtons array shouldn't be empty")
-        collapsedIcon = optionButtons.first!.currentImage
-        for i in 0..<optionButtons.count {
-            optionButtons[i].tag = i + 1
+    init(options: [UIButton], expandedIcon: UIImage? = nil) {
+        assert(!options.isEmpty, "OptionButtons array shouldn't be empty")
+        collapsedIcon = options.first!.currentImage
+        for i in 0..<options.count {
+            options[i].tag = i + 1
         }
         self.expandedIcon = expandedIcon
-        self.optionButtons = optionButtons
+        self.optionButtons = options
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
         setupViews()
