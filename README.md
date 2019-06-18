@@ -11,7 +11,7 @@ You can create YZDropdown in two ways:
 ### Passing only icons to initializer
 
 ```swift
-let dropdown = YZDropdown(icons: [UIImage(), UIImage()])
+let dropdown = YZDropdown(options: [UIImage(), UIImage()])
 ```
 
 ### Passing ready buttons to initializer
@@ -21,7 +21,7 @@ let firstButton: UIButton(type: .system)
 let secondButton: UIButton(type: .system)
 let thirdButton: UIButton(type: .system)
 
-let dropdown = YZDropdown(optionButtons: [firstButton,
+let dropdown = YZDropdown(options: [firstButton,
                                           secondButton,
                                           thirdButton])
 ```
