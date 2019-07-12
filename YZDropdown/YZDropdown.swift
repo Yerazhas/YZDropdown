@@ -25,7 +25,7 @@ class YZDropdown: UIView {
     }
     
     init(options: [UIImage], expandedIcon: UIImage? = nil) {
-        assert(!options.isEmpty, "Icons array shouldn't be empty")
+        assert(!options.isEmpty, "Options array shouldn't be empty")
         var tempButtons = [UIButton]()
         collapsedIcon = options.first!
         for i in 0..<options.count {
@@ -43,7 +43,7 @@ class YZDropdown: UIView {
     }
     
     init(options: [UIButton], expandedIcon: UIImage? = nil) {
-        assert(!options.isEmpty, "OptionButtons array shouldn't be empty")
+        assert(!options.isEmpty, "Options array shouldn't be empty")
         collapsedIcon = options.first!.currentImage
         for i in 0..<options.count {
             options[i].tag = i + 1
