@@ -17,14 +17,14 @@ class ViewController: UIViewController {
 //        view.addSubview(dropdown1)
         dropdown.optionSelection = { [weak dropdown] (index) in
             print("option tapped at index: \(index)")
-            dropdown?.changeExpandedState()
+            dropdown?.toggle()
         }
 //        dropdown1.optionSelection = { [weak dropdown1] (index) in
 //            print("option tapped at index: \(index)")
 //            dropdown1?.changeExpandedState()
 //        }
         dropdown.snp.makeConstraints { (make) in
-            make.centerY.equalToSuperview()
+            make.top.equalTo(view.snp.centerY).offset(-100)
             make.centerX.equalToSuperview()
         }
 //        dropdown1.snp.makeConstraints { (make) in

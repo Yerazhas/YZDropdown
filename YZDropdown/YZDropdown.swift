@@ -14,6 +14,11 @@ class YZDropdown: UIView {
     private let expandedIcon: UIImage?
     private var collapsedIcon: UIImage?
     private let optionButtons: [UIButton]
+    private var state: YZDropdownState! {
+        didSet {
+            print(String(describing: state))
+        }
+    }
     private var isExpanded = false {
         didSet {
             if isExpanded {
@@ -23,6 +28,40 @@ class YZDropdown: UIView {
             }
         }
     }
+    
+    func toggle() {
+        state.toggle()
+    }
+    
+    func setState(to state: YZDropdownState) {
+        self.state = state
+    }
+    
+    lazy var changingState: YZDropdownState = {
+        let cs = YZChangingState()
+        
+        return cs
+    }()
+    
+    lazy var expandedState: YZDropdownState = {
+        let es = YZExpandedState()
+        es.toggleAction = { [unowned self] in
+            self.setState(to: self.changingState)
+            self.setCollapsedState()
+        }
+        
+        return es
+    }()
+    
+    lazy var collapsedState: YZDropdownState = {
+        let cs = YZCollapsedState()
+        cs.toggleAction = { [unowned self] in
+            self.setState(to: self.changingState)
+            self.setExpandedState()
+        }
+        
+        return cs
+    }()
     
     init(options: [UIImage], expandedIcon: UIImage? = nil) {
         assert(!options.isEmpty, "Options array shouldn't be empty")
@@ -40,6 +79,7 @@ class YZDropdown: UIView {
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
         setupViews()
+        self.state = self.collapsedState
     }
     
     init(options: [UIButton], expandedIcon: UIImage? = nil) {
@@ -77,13 +117,16 @@ class YZDropdown: UIView {
     
     private func setCollapsedState() {
         optionButtons[0].setImage(collapsedIcon!.withRenderingMode(.alwaysOriginal), for: .normal)
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 15, options: .curveEaseInOut, animations: {
             for i in 1..<self.optionButtons.count {
-                let timeInterval = 0.01
+                let timeInterval = 0.03
                 DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval * Double(i), execute: {
                     let optionButton = self.optionButtons[i]
                     self.optionsVStack.removeArrangedSubview(optionButton)
                     optionButton.removeFromSuperview()
+                    if i == self.optionButtons.count - 1 {
+                        self.setState(to: self.collapsedState)
+                    }
                 })
             }
         }) { (_) in }
@@ -93,12 +136,15 @@ class YZDropdown: UIView {
         if let expandedIcon = expandedIcon {
             optionButtons[0].setImage(expandedIcon.withRenderingMode(.alwaysOriginal), for: .normal)
         }
-        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 4, initialSpringVelocity: 7, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 10, initialSpringVelocity: 15, options: .curveEaseInOut, animations: {
             for i in 1..<self.optionButtons.count {
-                let timeInterval = 0.01
+                let timeInterval = 0.03
                 DispatchQueue.main.asyncAfter(deadline: .now() + timeInterval * Double(i), execute: {
                     let optionButton = self.optionButtons[i]
                     self.optionsVStack.addArrangedSubview(optionButton)
+                    if i == self.optionButtons.count - 1 {
+                        self.setState(to: self.expandedState)
+                    }
                 })
             }
         }) { (_) in }
