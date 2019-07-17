@@ -19,49 +19,6 @@ class YZDropdown: UIView {
             print(String(describing: state))
         }
     }
-    private var isExpanded = false {
-        didSet {
-            if isExpanded {
-                setExpandedState()
-            } else {
-                setCollapsedState()
-            }
-        }
-    }
-    
-    func toggle() {
-        state.toggle()
-    }
-    
-    func setState(to state: YZDropdownState) {
-        self.state = state
-    }
-    
-    lazy var changingState: YZDropdownState = {
-        let cs = YZChangingState()
-        
-        return cs
-    }()
-    
-    lazy var expandedState: YZDropdownState = {
-        let es = YZExpandedState()
-        es.toggleAction = { [unowned self] in
-            self.setState(to: self.changingState)
-            self.setCollapsedState()
-        }
-        
-        return es
-    }()
-    
-    lazy var collapsedState: YZDropdownState = {
-        let cs = YZCollapsedState()
-        cs.toggleAction = { [unowned self] in
-            self.setState(to: self.changingState)
-            self.setExpandedState()
-        }
-        
-        return cs
-    }()
     
     init(options: [UIImage], expandedIcon: UIImage? = nil) {
         assert(!options.isEmpty, "Options array shouldn't be empty")
@@ -95,6 +52,14 @@ class YZDropdown: UIView {
         setupViews()
     }
     
+    func toggle() {
+        state.toggle()
+    }
+    
+    func setState(to state: YZDropdownState) {
+        self.state = state
+    }
+    
     private func setupInitialStackAndButtonActions() {
         optionsVStack.addArrangedSubview(optionButtons[0])
         optionButtons.forEach { (optionButton) in
@@ -109,10 +74,6 @@ class YZDropdown: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         shouldSetBorder(true)
-    }
-    
-    func changeExpandedState() {
-        isExpanded.toggle()
     }
     
     private func setCollapsedState() {
@@ -178,5 +139,31 @@ class YZDropdown: UIView {
         ovs.spacing = 8
         
         return ovs
+    }()
+    
+    lazy var changingState: YZDropdownState = {
+        let cs = YZChangingState()
+        
+        return cs
+    }()
+    
+    lazy var expandedState: YZDropdownState = {
+        let es = YZExpandedState()
+        es.toggleAction = { [unowned self] in
+            self.setState(to: self.changingState)
+            self.setCollapsedState()
+        }
+        
+        return es
+    }()
+    
+    lazy var collapsedState: YZDropdownState = {
+        let cs = YZCollapsedState()
+        cs.toggleAction = { [unowned self] in
+            self.setState(to: self.changingState)
+            self.setExpandedState()
+        }
+        
+        return cs
     }()
 }

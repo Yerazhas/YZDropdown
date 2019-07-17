@@ -9,7 +9,6 @@
 import Foundation
 
 class YZChangingState: YZDropdownState {
-    var context: YZDropdown?
     var toggleAction: (() -> ())?
     func toggle() {
         print("sdfsdf")

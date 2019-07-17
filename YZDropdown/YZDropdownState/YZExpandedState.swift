@@ -9,7 +9,6 @@
 import Foundation
 
 class YZExpandedState: YZDropdownState {
-    var context: YZDropdown?
     var toggleAction: (() -> ())?
     func toggle() {
         toggleAction?()
