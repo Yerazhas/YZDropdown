@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		0859157D412EC334BE2A18F3 /* Pods_YZDropdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60ED0D3F0EBE8463AC591AE5 /* Pods_YZDropdown.framework */; };
 		604761D822DFB54A0093F914 /* YZDropdownState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761D722DFB54A0093F914 /* YZDropdownState.swift */; };
-		604761DA22DFB5650093F914 /* YZCollapsedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761D922DFB5650093F914 /* YZCollapsedState.swift */; };
-		604761DC22DFB5860093F914 /* YZExpandedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761DB22DFB5860093F914 /* YZExpandedState.swift */; };
-		604761DE22DFB59D0093F914 /* YZChangingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761DD22DFB59D0093F914 /* YZChangingState.swift */; };
+		604761DA22DFB5650093F914 /* CollapsedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761D922DFB5650093F914 /* CollapsedState.swift */; };
+		604761DC22DFB5860093F914 /* ExpandedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761DB22DFB5860093F914 /* ExpandedState.swift */; };
+		604761DE22DFB59D0093F914 /* ChangingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604761DD22DFB59D0093F914 /* ChangingState.swift */; };
 		6058BC1D22B5B87900342C44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC1C22B5B87900342C44 /* AppDelegate.swift */; };
 		6058BC1F22B5B87900342C44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058BC1E22B5B87900342C44 /* ViewController.swift */; };
 		6058BC2222B5B87900342C44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6058BC2022B5B87900342C44 /* Main.storyboard */; };
@@ -23,9 +23,9 @@
 
 /* Begin PBXFileReference section */
 		604761D722DFB54A0093F914 /* YZDropdownState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZDropdownState.swift; sourceTree = "<group>"; };
-		604761D922DFB5650093F914 /* YZCollapsedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZCollapsedState.swift; sourceTree = "<group>"; };
-		604761DB22DFB5860093F914 /* YZExpandedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZExpandedState.swift; sourceTree = "<group>"; };
-		604761DD22DFB59D0093F914 /* YZChangingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YZChangingState.swift; sourceTree = "<group>"; };
+		604761D922DFB5650093F914 /* CollapsedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollapsedState.swift; sourceTree = "<group>"; };
+		604761DB22DFB5860093F914 /* ExpandedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedState.swift; sourceTree = "<group>"; };
+		604761DD22DFB59D0093F914 /* ChangingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangingState.swift; sourceTree = "<group>"; };
 		6058BC1922B5B87900342C44 /* YZDropdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YZDropdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6058BC1C22B5B87900342C44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6058BC1E22B5B87900342C44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -64,9 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				604761D722DFB54A0093F914 /* YZDropdownState.swift */,
-				604761D922DFB5650093F914 /* YZCollapsedState.swift */,
-				604761DB22DFB5860093F914 /* YZExpandedState.swift */,
-				604761DD22DFB59D0093F914 /* YZChangingState.swift */,
+				604761D922DFB5650093F914 /* CollapsedState.swift */,
+				604761DB22DFB5860093F914 /* ExpandedState.swift */,
+				604761DD22DFB59D0093F914 /* ChangingState.swift */,
 			);
 			path = YZDropdownState;
 			sourceTree = "<group>";
@@ -232,10 +232,10 @@
 				604761D822DFB54A0093F914 /* YZDropdownState.swift in Sources */,
 				6058BC1F22B5B87900342C44 /* ViewController.swift in Sources */,
 				6058BC2F22B5B89A00342C44 /* YZDropdown.swift in Sources */,
-				604761DE22DFB59D0093F914 /* YZChangingState.swift in Sources */,
-				604761DC22DFB5860093F914 /* YZExpandedState.swift in Sources */,
+				604761DE22DFB59D0093F914 /* ChangingState.swift in Sources */,
+				604761DC22DFB5860093F914 /* ExpandedState.swift in Sources */,
 				6058BC1D22B5B87900342C44 /* AppDelegate.swift in Sources */,
-				604761DA22DFB5650093F914 /* YZCollapsedState.swift in Sources */,
+				604761DA22DFB5650093F914 /* CollapsedState.swift in Sources */,
 				6058BC3122B5B98A00342C44 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

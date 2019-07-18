@@ -8,9 +8,12 @@
 
 import Foundation
 
-class YZChangingState: YZDropdownState {
-    var toggleAction: (() -> ())?
-    func toggle() {
-        print("sdfsdf")
+class ChangingState: YZDropdownState {
+    let context: YZDropdown
+    
+    required init(context: YZDropdown) {
+        self.context = context
     }
+    
+    func toggle() {}
 }

@@ -36,7 +36,7 @@ class YZDropdown: UIView {
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
         setupViews()
-        self.state = self.collapsedState
+        state = CollapsedState(context: self)
     }
     
     init(options: [UIButton], expandedIcon: UIImage? = nil) {
@@ -50,6 +50,7 @@ class YZDropdown: UIView {
         super.init(frame: .zero)
         setupInitialStackAndButtonActions()
         setupViews()
+        state = CollapsedState(context: self)
     }
     
     func toggle() {
@@ -76,7 +77,7 @@ class YZDropdown: UIView {
         shouldSetBorder(true)
     }
     
-    private func setCollapsedState() {
+    func setCollapsedState() {
         optionButtons[0].setImage(collapsedIcon!.withRenderingMode(.alwaysOriginal), for: .normal)
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 5, initialSpringVelocity: 15, options: .curveEaseInOut, animations: {
             for i in 1..<self.optionButtons.count {
@@ -86,14 +87,14 @@ class YZDropdown: UIView {
                     self.optionsVStack.removeArrangedSubview(optionButton)
                     optionButton.removeFromSuperview()
                     if i == self.optionButtons.count - 1 {
-                        self.setState(to: self.collapsedState)
+                        self.setState(to: CollapsedState(context: self))
                     }
                 })
             }
         }) { (_) in }
     }
     
-    private func setExpandedState() {
+    func setExpandedState() {
         if let expandedIcon = expandedIcon {
             optionButtons[0].setImage(expandedIcon.withRenderingMode(.alwaysOriginal), for: .normal)
         }
@@ -104,7 +105,7 @@ class YZDropdown: UIView {
                     let optionButton = self.optionButtons[i]
                     self.optionsVStack.addArrangedSubview(optionButton)
                     if i == self.optionButtons.count - 1 {
-                        self.setState(to: self.expandedState)
+                        self.setState(to: ExpandedState(context: self))
                     }
                 })
             }
@@ -139,31 +140,5 @@ class YZDropdown: UIView {
         ovs.spacing = 8
         
         return ovs
-    }()
-    
-    lazy var changingState: YZDropdownState = {
-        let cs = YZChangingState()
-        
-        return cs
-    }()
-    
-    lazy var expandedState: YZDropdownState = {
-        let es = YZExpandedState()
-        es.toggleAction = { [unowned self] in
-            self.setState(to: self.changingState)
-            self.setCollapsedState()
-        }
-        
-        return es
-    }()
-    
-    lazy var collapsedState: YZDropdownState = {
-        let cs = YZCollapsedState()
-        cs.toggleAction = { [unowned self] in
-            self.setState(to: self.changingState)
-            self.setExpandedState()
-        }
-        
-        return cs
     }()
 }

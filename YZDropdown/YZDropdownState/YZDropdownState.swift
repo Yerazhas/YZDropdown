@@ -9,6 +9,7 @@
 import Foundation
 
 protocol YZDropdownState {
-    var toggleAction: (() -> ())? { get set }
     func toggle()
+    var context: YZDropdown { get }
+    init(context: YZDropdown)
 }
